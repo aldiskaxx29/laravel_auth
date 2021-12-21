@@ -30,7 +30,7 @@ class MailSend extends Mailable
      */
     public function build()
     {
-        return $this->subject('Tutorial Laravel Mail | ayongoding.com')
+        return $this->subject('Aktivasi Akun | aldoskax.com')
                     ->view('kirimEmail');
     }
 }

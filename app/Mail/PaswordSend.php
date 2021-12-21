@@ -30,7 +30,7 @@ class PaswordSend extends Mailable
      */
     public function build()
     {
-        return $this->subject('Ubah Password Bray')
+        return $this->subject('Ubah Password Baru')
                     ->view('passwordMail');
     }
 }
