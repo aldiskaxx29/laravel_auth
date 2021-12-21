@@ -91,7 +91,7 @@ class AuthController extends Controller
 
     public function lupaPasswordPost(Request $request){
         $users = User::where('email', $request->email)->first();
-        // dd($user->id);die;
+        // dd($users);die;
 
         if ($users) {
 
@@ -101,7 +101,7 @@ class AuthController extends Controller
                 'token' => Str::random(60),
             ];
             // $id = $user->id;
-            // dd($id);
+            // dd($user);
             Mail::to($request->email)->send(new PaswordSend($user));
             Cache::put($users->id . ':forgot_password', Str::random(60));
             // $value = Cache::put($id.':forgot_password' => Str::random(60));
